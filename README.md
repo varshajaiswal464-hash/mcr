@@ -48,3 +48,4 @@ Marwari College Ranchi is one of the leading educational institutions in Jharkha
 📌 Interactivity → ⚡ JavaScript
 ## My GitHub 💻✨
 https://github.com/varshajaiswal464-hash/mcr
+## 👤 Author:-Varsha Kumari
