@@ -1,0 +1,221 @@
+<style>
+{
+background-colour:white;
+margin:20px;
+}
+button
+{
+height:40px;
+width:200px;
+font-size:20px;
+}
+button:hover
+{
+background-color:cyan;
+}
+td
+{
+font-size:23px;
+}
+table
+{
+font-size:30px;
+}
+input,textarea
+{
+font-size:25px;
+}
+</style>
+
+<script>
+function valid()
+{
+num=parseInt(m.value)
+d=0
+for(i=num;i>0;i=parseInt(i/10))
+d++
+if(d!=10)
+{
+document.getElementById("m1").innerHTML="INVALID MOBILE NUMBER MUST BE OF 10 DIGITS"
+return false;
+}
+else
+document.getElementById("m1").innerHTML=""
+
+str=e.value
+
+c1=str.indexOf(".com")
+c2=str.indexOf("@")
+
+if(c1==-1 || c2==-1)
+{
+document.getElementById("e1").innerHTML="INVALID EMAIL ID  MUST BE OF @ AND .COM "
+return false;
+}
+else
+document.getElementById("e1").innerHTML=" "
+
+}
+
+function a1()
+{
+document.getElementById("login").style="display:none";
+document.getElementById("home").style="display:block";
+}
+function a2()
+{
+document.getElementById("home").style="display:none";
+document.getElementById("login").style="display:block";
+}
+function a3()
+{
+document.getElementById("login").style="display:none";
+document.getElementById("home").style="display:none";
+document.getElementById("register").style="display:block";
+}
+function a4()
+{
+document.getElementById("login").style="display:none";
+document.getElementById("register").style="display:none";
+document.getElementById("home").style="display:none";
+document.getElementById("contact info").style="display:block";
+}
+</script>
+<center>
+<h1> <u> Welcome To Marwari College Ranchi </h1>
+<h2><font color="red">A Unit Of Ranchi University</u></font></h2>
+</center>
+<img src = "logo.png" style = " position : absolute; top: 0px; border: solid; border-radius:80px; height:100px; width:100px; left:350px;">
+<div style = "position:absolute; height:40px;width:1200px;left:290px">
+<button onclick="a1()">HOME</button>
+<button onclick="a2()">LOGIN</button>
+<button onclick="a3()">REGISTER</button>
+<button onclick="a4()">CONTACT INFO</button>
+
+<div id="register"style="display:none">
+<br>
+<br>
+<form  onsubmit="return valid()" action="save.php">
+<table>
+<tr>
+<TD>ENTER NAME</TD>
+<TD><INPUT TYPE="TEXT"></TD>
+</tr>
+<tr>
+<TD>REG NO</TD>
+<TD><INPUT TYPE="PASSWORD"></TD>
+</tr>
+<TD>MOBILE NUMBER</TD>
+<TD><INPUT TYPE="TEXT" id="m" onchange="valid()"><font color="red" id="m1"></font></TD>
+</tr>
+<tr>
+
+
+<TD>EMAIL ID</TD>
+<TD><INPUT TYPE="text" id="e" onchange="valid()"><font color="red" id="e1"></font></TD>
+</tr>
+<TD>DOB</TD>
+<TD><INPUT TYPE="date"></TD>
+</tr>
+
+<tr>
+<TD>ADDRESS</TD>
+<TD><TEXTAREA ROWS="4" COLS="30"></TEXTAREA></TD>
+</tr>
+<tr>
+<td>Course</td>
+<td>
+<select>
+<option>Select The Course</option>
+<option>BCA</option>
+<option>B.Sc IT</option>
+<option>BCS</option>
+<option>B.Sc In AI&ML</option>
+<option>MBA</option>
+<option>MCA</option>
+<option>BBA</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>
+<input type="radio" name="g">M
+<input type="radio" name="g">F
+</td>
+</tr>
+<tr>
+<td>Languages Known</td>
+<td>
+<input type="checkbox">Hin
+<input type="checkbox">Eng
+<input type="checkbox">Nagpuri
+<input type="checkbox">Bhojpuri
+</td>
+</tr>
+<tr>
+<TD><input type="submit" value="REGISTER"></TD>
+<TD><input type="reset" value="RESET"></TD>
+</tr>
+</table>
+</form>
+</div>
+<div id="login"style="display:none">
+<br>
+<br>
+<br>
+<table>
+<tr>
+<TD>USERNAME</TD>
+<TD><INPUT TYPE="TEXT"></TD>
+</tr>
+<tr>
+<TD>PASSWORD</TD>
+<TD><INPUT TYPE="PASSWORD"></TD>
+</tr>
+
+<TD><button>LOGIN</button></TD>
+<TD><button>RESET</button></TD>
+
+</tr>
+</table>
+</div>
+<div id="home"style="display:none">
+<table>
+<br>
+<div style=" max-width:500px;">
+<img src="m1.jpg" width="600" height="450" align ="left:300px;"  >
+<tr>
+<h3>ABOUT US</h3>
+<P> Marwari College, Ranchi is one of the premier institutions of higher education in Jharkhand. Established in 1963 by the Marwari Shiksha Trust, the college was founded with the vision of providing quality education to students from all sections of society, especially the tribal, rural, and economically weaker communities. The institution came into existence through the dedicated efforts of Ganga Prasad Budhia. </p>
+<p>
+Over the years, the college has grown from a small institution with a few hundred students into a renowned autonomous college offering undergraduate, postgraduate, vocational, and professional courses in Arts, Commerce, Science, and Management. It became a constituent unit of Ranchi University in 1980 and has received recognition from the UGC along with NAAC accreditation for academic excellence.</p>
+ 
+<h3>Vision:</h3>
+<p>
+To create a quality teaching-learning environment that nurtures knowledge, skills, leadership, and social responsibility, enabling students to contribute positively to society. </p>
+
+<h3>Mission:</h3>
+<P>
+To improve graduate outcomes.<br>
+To provide quality and inclusive education.<br>
+To develop professional, technical, and soft skills among students.<br>
+To promote ethical values, leadership, and nation-building. <br>
+Today, Marwari College, Ranchi is recognized as a leading educational institution dedicated to academic excellence, skill development, innovation, and the holistic growth of students. <br></p>
+</table>
+</div>
+<div id="contact info"style="display:none">
+<br>
+<br>
+<table>
+<div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:nowrap;font-size:25px;">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.6398523379116!2d85.31715397532413!3d23.365058978935245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e104460df367%3A0x3bc13669149f6e54!2sMarwari%20College!5e0!3m2!1sen!2sin!4v1781172192989!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<div style="max-width:500px;">
+<p>Marwari College, Ranchi Near Swami Vivekanand Sarovar Lake Road, Hindpiri, Ranchi Jharkhand-834001<br>
+</p>
+<p>Telephone  0651- 221 3134<br>
+
+Email Id  marwaricollegeranchi@gmail.com
+</p>
+</table>
